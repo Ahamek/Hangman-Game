@@ -48,10 +48,17 @@ public class Hangman {
     }
 
     private static boolean getPlayerGuess(String word) {
-        System.out.println("Please enter a letter:");
-        String letterGuess = keyboard.nextLine();
-        playerGuesses.add(letterGuess.charAt(0));
-        return word.contains(letterGuess);
+        char letterGuess;
+        do {
+            System.out.println("Please enter a letter:");
+            letterGuess = keyboard.nextLine().charAt(0);
+            if (!playerGuesses.contains(letterGuess)) {
+                playerGuesses.add(letterGuess);
+            } else {
+                System.out.println("You have already entered that letter");
+            }
+        } while (!playerGuesses.contains(letterGuess));
+        return word.contains(String.valueOf(letterGuess));
     }
 
     private static boolean printWordEncrypted(String word) {
