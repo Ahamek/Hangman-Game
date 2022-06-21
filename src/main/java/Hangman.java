@@ -31,13 +31,19 @@ public class Hangman {
                 break;
             }
 
-            System.out.println("Please enter your guess for the word: / or press ENTER to continue: ");
-            if (keyboard.nextLine().equals(word)) {
-                System.out.println("You win!");
-                break;
-            } else {
-                System.out.println("Nope! Try again.");
-            }
+            attemptToGuessWord(word);
+        }
+    }
+
+    private static void attemptToGuessWord(String word) {
+        System.out.println("Please enter your guess for the word: / or press ENTER to continue: ");
+        String userGuessWord = keyboard.nextLine();
+        if (userGuessWord.equals(word)) {
+            System.out.println("You win!");
+        } else if (userGuessWord.equals("")) {
+            System.out.println();
+        } else {
+            System.out.println("Nope! Try again.");
         }
     }
 
