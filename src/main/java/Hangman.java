@@ -20,13 +20,13 @@ public class Hangman {
                 break;
             }
 
-            printWordState(word);
+            printWordEncrypted(word);
 
             if (!getPlayerGuess(word)) {
                 wrongCount++;
             }
 
-            if (printWordState(word)) {
+            if (printWordEncrypted(word)) {
                 System.out.println("You win!");
                 break;
             }
@@ -48,7 +48,7 @@ public class Hangman {
         return word.contains(letterGuess);
     }
 
-    private static boolean printWordState(String word) {
+    private static boolean printWordEncrypted(String word) {
         int correctCount = 0;
         for (int i = 0; i < word.length(); i++) {
             if (playerGuesses.contains(word.charAt(i))) {
