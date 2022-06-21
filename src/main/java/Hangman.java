@@ -3,13 +3,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Hangman {
-
     private static final List<Character> playerGuesses = new ArrayList<>();
     private static final Scanner keyboard = new Scanner(System.in);
+    public static final WordsDataBase wdb = new WordsDataBase();
 
-    public static void main(String[] args) {
-        WordsDataBase wdb = new WordsDataBase();
-
+    public static void play() {
         final String word = wdb.getWord();
         int wrongCount = 0;
 
@@ -59,7 +57,7 @@ public class Hangman {
             } else if (word.charAt(i) == ' ') {
                 System.out.print(" ");
             } else {
-                System.out.print("-");
+                System.out.print("*");
             }
         }
         System.out.println();
