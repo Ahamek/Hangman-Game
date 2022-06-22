@@ -3,7 +3,7 @@ Hangman-Game
 
 Description
 -----
-Simple hangman terminal game
+Simple terminal game
 
 Install & Requirements
 -----
