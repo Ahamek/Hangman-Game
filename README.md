@@ -15,7 +15,7 @@ Software requirements are as follow:
 How to run the program
 -----
 **Using Intellij IDEA**: I have included necessary files, just pull the repo 
-and open with IDEA. To compile and play the game, run the Gui2048 class in the following path:
+and open with IDEA. To compile and play the game, run the Main class in the following path:
 ```
 src/main/java/main
 ```
